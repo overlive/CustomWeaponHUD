@@ -135,7 +135,39 @@ class RLNT_RscPicture
     h = 0.15;
 };
 
-class RLNT_RscButton
+class RLNT_RscButton_Static
+{
+	access = 0;
+	type = 1;
+	text = "";
+	colorText[] = {1,1,1,1};
+	colorDisabled[] = {1,1,1,0.25};
+	colorBackground[] = {0.45,0.45,0.45,1};
+	colorBackgroundDisabled[] = {0,0,0,0.5};
+	colorBackgroundActive[] = {-1,-1,-1,-1};
+	colorFocused[] = {-1,-1,-1,-1};
+	colorShadow[] = {0,0,0,0};
+	colorBorder[] = {0,0,0,1};
+	soundEnter[] = {"\ca\ui\data\sound\onover",0.09,1};
+	soundPush[] = {"\ca\ui\data\sound\new1",0,0};
+	soundClick[] = {"\ca\ui\data\sound\onclick",0.07,1};
+	soundEscape[] = {"\ca\ui\data\sound\onescape",0.09,1};
+	style = 2;
+	x = 0;
+	y = 0;
+	w = 0.095589;
+	h = 0.039216;
+	shadow = 2;
+	font = "Zeppelin32";
+	sizeEx = 0.0173 * SafezoneH;
+	offsetX = 0.003;
+	offsetY = 0.003;
+	offsetPressedX = 0.002;
+	offsetPressedY = 0.002;
+	borderSize = 0;
+};
+
+class RLNT_RscButton_Dynamic
 {
 	access = 0;
 	type = 1;
