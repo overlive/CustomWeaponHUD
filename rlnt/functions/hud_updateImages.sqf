@@ -18,34 +18,34 @@ _hasBandage       = 'ItemBandage' in magazines player;
 _handgun          = "";
 
 /* Refresh images */
-//Primary Weapon
-_rifle1Update ctrlSetText(gettext(configFile >> 'cfgWeapons' >> (primaryWeapon player) >> 'picture'));
+  //Primary Weapon
+    _rifle1Update ctrlSetText(gettext(configFile >> 'cfgWeapons' >> (primaryWeapon player) >> 'picture'));
 
-//Seccond Primary Weapon
-_rifle2Update ctrlSetText(gettext(configFile >> 'cfgWeapons' >> dayz_onBack >> 'picture'));
+  //Seccond Primary Weapon
+    _rifle2Update ctrlSetText(gettext(configFile >> 'cfgWeapons' >> dayz_onBack >> 'picture'));
 
-//Handgun Weapon
-{
-  if ((getNumber(configFile >> 'cfgWeapons' >> _x >> 'Type')) == 2) then {
-    _handgun = _x;
-  };
-} forEach weapons player;
-if (_handgun == "") then {
-  _secondaryUpdate ctrlSetText("");
-} else {
-  _secondaryUpdate ctrlSetText(getText(configFile >> 'cfgWeapons' >> _handgun >> 'picture'));
-};
+  //Handgun Weapon
+    {
+      if ((getNumber(configFile >> 'cfgWeapons' >> _x >> 'Type')) == 2) then {
+        _handgun = _x;
+      };
+    } forEach weapons player;
+    if (_handgun == "") then {
+      _secondaryUpdate ctrlSetText("");
+    } else {
+      _secondaryUpdate ctrlSetText(getText(configFile >> 'cfgWeapons' >> _handgun >> 'picture'));
+    };
 
-//Painkiller
-if (_hasPainkiller) then {
-  _painkillerUpdate ctrlSetText(gettext(configFile >> 'cfgMagazines' >> 'itempainkiller' >> 'picture'));
-} else {
-  _painkillerUpdate ctrlSetText("");
-};
+  //Painkiller
+    if (_hasPainkiller) then {
+      _painkillerUpdate ctrlSetText(gettext(configFile >> 'cfgMagazines' >> 'itempainkiller' >> 'picture'));
+    } else {
+      _painkillerUpdate ctrlSetText("");
+    };
 
-//Bandage
-if (_hasBandage) then {
-  _bandageUpdate ctrlSetText(gettext(configFile >> 'cfgMagazines' >> 'itembandage' >> 'picture'));
-} else {
-  _bandageUpdate ctrlSetText("");
-};
+  //Bandage
+    if (_hasBandage) then {
+      _bandageUpdate ctrlSetText(gettext(configFile >> 'cfgMagazines' >> 'itembandage' >> 'picture'));
+    } else {
+      _bandageUpdate ctrlSetText("");
+    };

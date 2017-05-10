@@ -15,25 +15,25 @@ _display        = uiNamespace getVariable["rlnt_rlnt_weaponhud_2_items", display
 sleep 1;
 
 /* Set Images */
-//Primary Weapon
-(_display displayCtrl 1200) ctrlSetText(gettext(configFile >> 'cfgWeapons' >> (primaryWeapon player) >> 'picture'));
+  //Primary Weapon
+    (_display displayCtrl 1200) ctrlSetText(gettext(configFile >> 'cfgWeapons' >> (primaryWeapon player) >> 'picture'));
 
-//Seccond Primary Weapon
-(_display displayCtrl 1201) ctrlSetText(gettext(configFile >> 'cfgWeapons' >> dayz_onBack >> 'picture'));
+  //Seccond Primary Weapon
+    (_display displayCtrl 1201) ctrlSetText(gettext(configFile >> 'cfgWeapons' >> dayz_onBack >> 'picture'));
 
-//Handgun Weapon
-{
-  if ((getNumber (configFile >> 'cfgWeapons' >> _x >> 'Type')) == 2) exitWith {
-    (_display displayCtrl 1202) ctrlSetText(getText(configFile >> 'cfgWeapons' >> _x >> 'picture'));
-  };
-} forEach weapons player;
+  //Handgun Weapon
+    {
+      if ((getNumber (configFile >> 'cfgWeapons' >> _x >> 'Type')) == 2) exitWith {
+        (_display displayCtrl 1202) ctrlSetText(getText(configFile >> 'cfgWeapons' >> _x >> 'picture'));
+      };
+    } forEach weapons player;
 
-//Painkiller
-if (_hasPainkiller) then {
-  (_display displayCtrl 1203) ctrlSetText(gettext(configFile >> 'cfgMagazines' >> 'itempainkiller' >> 'picture'));
-};
+  //Painkiller
+    if (_hasPainkiller) then {
+      (_display displayCtrl 1203) ctrlSetText(gettext(configFile >> 'cfgMagazines' >> 'itempainkiller' >> 'picture'));
+    };
 
-//Bandage
-if (_hasBandage) then {
-  (_display displayCtrl 1204) ctrlSetText(gettext(configFile >> 'cfgMagazines' >> 'itembandage' >> 'picture'));
-};
+  //Bandage
+    if (_hasBandage) then {
+      (_display displayCtrl 1204) ctrlSetText(gettext(configFile >> 'cfgMagazines' >> 'itembandage' >> 'picture'));
+    };
